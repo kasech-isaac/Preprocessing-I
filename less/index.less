@@ -56,13 +56,27 @@ table {
 html, body {
     height: 100%;
 }
+html{
+	font-size: 62.5%;
+}
+
+@main-color: pink;
+@sec-color: white;
+@last-color: black;
+		
+.display(){
+	display: flex;
+	flex-direction: column;
+	}		
+
 *{
-	background-color: lavender;
+	background-color: @last-color;
 	}
+
 	body{
-		border: 6px solid yellow;
+		border: 10px solid @main-color;
 		margin: 10px;
-	}
+		}
 
 	// body{
 	// 	border: 3px solid rgb(155, 115, 136);
@@ -70,28 +84,29 @@ html, body {
 	// 	border-radius: 23px;
 	//   }
 	  h1{
-		color: black;
+		color: @sec-color;
 		margin:15px;
-		font-size: 2.0rem;
+		font-size: 2.9rem;
 		justify-content: flex-end;
 	  }
 
 	  header{
 		nav a {
 			margin: 10px;
-			border: 2px solid yellow;
+			border: 2px solid @sec-color;
 			padding: 5px;
 			display:flex;
 			display: inline-block;
-			color: yellow;
-			background-color: lightpink;
+			color: @last-color;
+			background-color: @main-color;
+			font-size: 1.7rem;
 			
-		}
+		
 			nav a:hover {
-				background: black;
-				color: white;
+				background: @sec-color;
+				color: @last-color;
 			
-
+			}
 		   }
 	  }
 
@@ -99,62 +114,107 @@ html, body {
 		.img1{
 			display: flex;
 			margin: 20px;
-			.p1{
+		
+		.p1{
 				
 				padding-left: 20px;
 				padding-top: 20px;
-				  font-size: 1.3rem;
+				  font-size: 2rem;
 				  text-align: center;
+				  color: @sec-color;
+				 
 			}
-	  }
+		}
+
 	  button{
-		color: rgb(255, 255, 0);
+		color: @last-color;
 		display: flex;
 		display: inline-block;
-		margin: 10px;
-		background-color: lightpink;
+		margin: 20px;
+		background-color: @main-color;
 		border-radius: 3px;
 		padding: 5px;
-		border: solid rgb(255, 255, 0);
-		font-size: 0.7rem;
+		border: solid @sec-color;
+		font-size: 1.7rem;
 	}
+
 	  .h2{
-		  display: flex;
+		  
 		  h2{
-			font-size: 1.3rem;
+			font-size: 3rem;
 			margin: 20px;
+			color:@sec-color;
 		}
 			p{
-				padding: 5px;
-				margin: 3rem ;
-				// margin-bottom: 3rem ;
+				padding: px;
+				margin: 2.5rem;
 				line-height: 30px;	
+				color: @sec-color;
+				font-size: 2rem;
+				text-align: right;
 			}
+			
 			h3{
 				display: flex;
-				 font-size: 1.3rem;
+				color: @sec-color;
+				 font-size: 2.5rem;
+				 margin: 20px;
+				 
 			}
 			ul{
-				margin-top: 3rem ;
-				margin-bottom: 3rem ;
-				line-height: 32px;      
+				margin-top: 3px;
+				margin: 10px;
+				line-height: 32px;     
+				color: @sec-color; 
+				font-size: 2rem;
+				text-size-adjust: 1rem; 
+
+				// @media ( max-width: 750px){
+				// 	display: none;
+				// 	padding: 0rem;
+				// 	margin: 0rem;
+				// 	font-size: 1.5rem;
+				}
 		   }
-			 }
+			 
 
 			.work{
 				display: flex;
 				margin: 20px;
+				color: @sec-color;
+				font-size: 1.7;
 
 				.h-work{
-					font-size: 1.3rem;
+					font-size: 1.9rem;
 				}
 				.ul{
 			
-					line-height: 20px; 
+					line-height: 25px; 
 					margin-top: 3rem ;
 					margin-bottom: 3rem ;
+					font-size: 1.7rem;
+					
 				}
 				}
+				@media ( max-width: 760px){
+					*{
+						background: blue;
+						}
+					h2{
+						color: black;
+					}
+					}
+
+					@media ( max-width: 450px){
+						*{
+							background: lime;
+							}
+							nav a{
+								.display();
+								
+							}
+						}
+						
 				
 		
 							
